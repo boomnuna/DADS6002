@@ -49,7 +49,7 @@ git clone https://github.com/YOUR_USERNAME/hadoop-bigdata-assignment.git
 cd hadoop-bigdata-assignment
 ```
 
-> **ทำไม?** เพื่อดาวน์โหลดโค้ดทั้งหมดจาก GitHub มาไว้ในเครื่องเรา
+> เพื่อดาวน์โหลดโค้ดทั้งหมดจาก GitHub มาไว้ในเครื่องเรา
 
 ---
 
@@ -59,7 +59,7 @@ cd hadoop-bigdata-assignment
 docker compose up -d
 ```
 
-> **ทำไม?** คำสั่งนี้จะสร้างและเปิด "เครื่องเสมือน" หลายตัวพร้อมกัน ได้แก่  
+> คำสั่งนี้จะสร้างและเปิด "เครื่องเสมือน" หลายตัวพร้อมกัน ได้แก่  
 > - **namenode** = หัวใจของ Hadoop ทำหน้าที่จัดการไฟล์ใน HDFS  
 > - **datanode** = ตัวเก็บข้อมูลจริง ๆ  
 > - **resourcemanager** = จัดการ resource สำหรับรัน job  
@@ -76,8 +76,7 @@ docker compose up -d
 ```bash
 MSYS_NO_PATHCONV=1 ./execute.sh
 ```
-
-> **ทำไม?**  
+  
 > - `MSYS_NO_PATHCONV=1` = บอก Git Bash บน Windows ว่าอย่าแปลง path เช่น `/user/root` ให้เป็น `C:\user\root` โดยอัตโนมัติ  
 > - `./execute.sh` = รัน script ที่ทำสิ่งเหล่านี้ตามลำดับ:
 >   1. copy `mapper.py`, `reducer.py`, `input.txt` เข้าไปใน container
@@ -93,7 +92,6 @@ MSYS_NO_PATHCONV=1 ./execute.sh
 MSYS_NO_PATHCONV=1 docker exec -it namenode hdfs dfs -cat /user/root/output/part-00000
 ```
 
-> **ทำไม?**  
 > - `docker exec -it namenode` = เข้าไปรันคำสั่งภายใน container ชื่อ `namenode`  
 > - `hdfs dfs -cat` = อ่านไฟล์จาก HDFS (คล้าย `cat` ใน Linux)  
 > - `/user/root/output/part-00000` = path ของไฟล์ผลลัพธ์ใน HDFS
@@ -105,8 +103,7 @@ MSYS_NO_PATHCONV=1 docker exec -it namenode hdfs dfs -cat /user/root/output/part
 ```bash
 MSYS_NO_PATHCONV=1 ./spark.sh
 ```
-
-> **ทำไม?**  
+  
 > - รัน script ที่ส่ง `spark_rdd.py` และ `spark_sql.py` เข้าไปรันใน spark-master container  
 > - ทั้งสองไฟล์ทำงานเดียวกับ MapReduce แต่ใช้ Spark API แทน  
 > - ผลลัพธ์จะแสดงออกมาใน terminal เลย
@@ -158,7 +155,7 @@ District 5: Average Income = 20888.89
 docker compose down
 ```
 
-> **ทำไม?** เพื่อหยุด containers ทั้งหมดและคืน RAM กลับให้เครื่อง  
+> เพื่อหยุด containers ทั้งหมดและคืน RAM กลับให้เครื่อง  
 > ถ้าไม่ปิด Docker จะกิน RAM ค้างไว้ตลอด
 
 ---
