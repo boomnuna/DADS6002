@@ -49,7 +49,6 @@
 ## 🚀 วิธีรัน (สำหรับมือใหม่)
 
 > ⚠️ ต้องติดตั้ง [Docker Desktop](https://www.docker.com/products/docker-desktop/) ก่อน  
-> และใช้ **Git Bash** แทน Command Prompt บน Windows
 
 ---
 
