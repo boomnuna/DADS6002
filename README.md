@@ -46,7 +46,7 @@
 
 ---
 
-## 🚀 วิธีรัน (สำหรับมือใหม่)
+## 🚀 วิธีรัน
 
 > ⚠️ ต้องติดตั้ง [Docker Desktop](https://www.docker.com/products/docker-desktop/) ก่อน  
 
