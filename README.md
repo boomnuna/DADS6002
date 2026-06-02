@@ -1,4 +1,4 @@
-# 🐘 Hadoop & Spark Assignment - DADS6002
+# Hadoop & Spark Assignment - DADS6002
 
 โปรเจกต์นี้สาธิตการคำนวณ **รายได้เฉลี่ยต่อเขต (Average Income per District)**  
 โดยใช้ 3 วิธี ได้แก่ Hadoop MapReduce, Spark RDD และ Spark SQL  
