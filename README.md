@@ -161,16 +161,6 @@ District 5: Average Income = 20888.89
 
 ---
 
-## 🌐 Web UI ที่เข้าดูได้ (หลัง docker compose up)
-
-| URL | ใช้ทำอะไร |
-|-----|-----------|
-| http://localhost:9870 | Hadoop NameNode UI ดูสถานะ HDFS |
-| http://localhost:8088 | YARN Resource Manager ดู job ที่รัน |
-| http://localhost:8080 | Spark Master UI ดู Spark workers |
-| http://localhost:8888 | Hue Web UI จัดการ HDFS ผ่านเบราว์เซอร์ |
-
----
 
 ## 🛑 ปิด Docker เมื่อใช้งานเสร็จ
 
