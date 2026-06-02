@@ -1,7 +1,6 @@
 import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, IntegerType, DoubleType
-import pyspark.sql.functions as F
 
 def main():
     # Create a Spark session
@@ -34,13 +33,20 @@ def main():
     # Read the CSV into a DataFrame using the schema
     df = spark.read.csv(input_file, schema=schema)
 
-    # Group by district_id and calculate the average personal_income
-    avg_df = df.groupBy("district_id") \
-               .agg(F.avg("personal_income").alias("average_income")) \
-               .orderBy("district_id")
+    # Register the DataFrame as a temporary SQL view
+    df.createOrReplaceTempView("income_data")
+
+    # Use Spark SQL to calculate the average personal_income per district
+    result = spark.sql("""
+        SELECT district_id,
+               AVG(personal_income) AS average_income
+        FROM income_data
+        GROUP BY district_id
+        ORDER BY district_id
+    """)
 
     # Show the formatted results
-    avg_df.show()
+    result.show()
 
     spark.stop()
 
